@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(26,27,36);
+    color: rgb(244,161,79);
+    font-family: VT323;
+}
+
+header {
+    background-color: rgb(109,65,46);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(244,161,79);
+}
+
+a:hover {
+    color: rgb(214, 118, 22);
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 125px;
+}
+
+h1 {
+    font-size: 75px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 50px;
+    margin-left: 115px;
+}
+
+p {
+    font-size: 25px;
+    text-align: center;
+    margin: 0px 80px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
