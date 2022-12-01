@@ -64,8 +64,71 @@ section.act-branch {
     margin-right: auto;
     width: 70%;
     border: dashed 15px grey;
+    padding: 20px;
 }
 
 section.act-branch img {
     height: 327px;
 }
+
+
+
+.rotating-dashed {
+    position: relative;
+    margin: 40px auto;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    color: #3498db;
+    
+    &:hover {
+      color: white;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+    
+    .dashing {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      
+      &:nth-of-type(1) { transform: rotate(   0deg ); }
+      &:nth-of-type(2) { transform: rotate(  90deg ); }
+      &:nth-of-type(3) { transform: rotate( 180deg ); }
+      &:nth-of-type(4) { transform: rotate( 270deg ); }
+  
+      i {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        border-bottom: 5px dashed;
+        animation: slideDash 2.5s infinite linear;
+      }
+    }
+  
+    strong {
+      display: block;
+      width: 95px;
+      line-height: 90px;
+      text-align: center;
+      position: absolute;
+      font-size: 50px;
+      transform: rotate( 90deg );
+    }
+}
+  
+  @keyframes slideDash {
+    from { transform: translateX( -50% ); }
+    to   { transform: translateX(   0% ); }
+  }
+  
+  
+  /* Defaults */
+  body {
+    background: #333;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
