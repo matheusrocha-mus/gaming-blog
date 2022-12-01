@@ -6,29 +6,36 @@ body {
 
 header {
     background-color: rgb(109,65,46);
-}
+}    
 
-a {
-    text-decoration: none;
-    color: rgb(244,161,79);
-}
-
-a:hover {
-    color: rgb(214, 118, 22);
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 li {
     list-style-type: none;
     display: inline-block;
     margin-right: 125px;
+    font-size: larger;
 }
+
+a {
+    text-decoration: none;
+    color: rgb(244,161,79);
+}    
+
+a:hover {
+    color: rgb(214, 118, 22);
+}    
 
 h1 {
     font-size: 75px;
     text-align: center;
 }
 
-h3 {
+h2 {
     font-size: 50px;
     margin-left: 115px;
 }
@@ -43,9 +50,22 @@ section {
     margin-bottom: 50px;
 }
 
-img {
+section.act-main img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 85%;
     margin-bottom: 30px;
+}
+
+section.act-branch {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border: dashed 15px grey;
+}
+
+section.act-branch img {
+    height: 327px;
 }
