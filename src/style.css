@@ -1,4 +1,6 @@
 body {
+    padding-top:200px;
+    margin: 0;
     background-color: rgb(26,27,36);
     color: rgb(244,161,79);
     font-family: VT323;
@@ -7,6 +9,12 @@ body {
 
 header {
     background-color: rgb(109,65,46);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
 }    
 
 ul {
@@ -38,15 +46,17 @@ a:hover {
     transform: scale(1.1);
 }    
 
-h1 {
-    font-size: 75px;
-    text-align: center;
+h1 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 125px;
     transform: translatey(0px);
-    transform: translatex(0px);
     animation: float 5s ease-in-out infinite;
 }
 
 h2 {
+    display: inline-block;
     font-size: 50px;
     margin-left: 115px;
 }
@@ -61,9 +71,13 @@ h1, h2, p {
     transition: 0.3s;
 }
 
-h1:hover, h2:hover, p:hover {
+h1:hover, p:hover {
     cursor: url(../customCursors/InscryptionText2.cur),text;
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+h2:hover {
+    transform: scale(1.3);
 }
 
 section {
@@ -95,7 +109,7 @@ section.act-branch img {
 }
 
 
-
+/*
 @-webkit-keyframes MOVE-BG {
     from {
         -webkit-transform: translateX(0);
@@ -154,7 +168,7 @@ section.act-branch img {
     100% {
         transform: translatey(0%);
     }
-}
+}*/
 
 .rotating-dashed {
     position: relative;
@@ -229,7 +243,7 @@ section.act-branch img {
 
 
 
-
+/*
 $h1:  rgba(45,45,45,1);
 $blue: #98b5cc;
 $yellow: #ffcc00;
@@ -277,4 +291,4 @@ h1 {
 		opacity: 0.4;
 		text-shadow: none;
 	}
-}
+}*/
