@@ -1,7 +1,7 @@
 body {
+    background-color: rgb(26,27,36);
     padding-top:200px;
     margin: 0;
-    background-color: rgb(26,27,36);
     color: rgb(244,161,79);
     font-family: VT323;
     cursor: url(../customCursors/InscryptionNormal.cur),default;
@@ -44,14 +44,16 @@ li:hover {
 }
 
 a {
+    display:inline-block;
     text-decoration: none;
     color: rgb(244,161,79);
+    transition: 0.3s;
 }
 
 a:hover {
     color: rgb(214, 118, 22);
     cursor: url(../customCursors/InscryptionLink.cur),pointer;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }    
 
 h1 img {
@@ -59,7 +61,7 @@ h1 img {
     margin: 50px auto;
     height: 125px;
     transform: translatey(0px);
-    animation: float 5s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite, flicker 5s infinite;
 }
 
 h2 {
@@ -118,52 +120,81 @@ section.act-branch img {
 
 
 @keyframes float {
-    0% {
-        transform: translatey(0px);
-    }
-    33% {
-        transform: translatey(15px);
-    }
-    66% {
-        transform: translatey(-15px);
-    }
-    100% {
-        transform: translatey(0px);
-    }
+    0% { transform: translatey(0px); }
+    33% { transform: translatey(15px); }
+    66% { transform: translatey(-15px); }
+    100% { transform: translatey(0px); }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    16% { opacity: 0.82; }
+    32% { opacity: 0.66; }
+    50% { opacity: 0.5; }
+    67% { opacity: 0.66; }
+    83% { opacity: 0.82; }
+    100% { opacity: 1; }
 }
 
 
 
-.backgrounder {
+.box-bg {
     background-image: 
-        repeating-linear-gradient(
-            0deg, 
-            transparent, 
-            transparent 4px,
-            rgb(153, 103, 81) 4px,
-            rgb(70, 34, 19) 8px
-        );
-    background-size: 200% 200%;
-    animation: stripes 40s linear infinite;
-}
+    repeating-linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 4px,
+        rgb(153, 103, 81) 4px,
+        rgb(70, 34, 19) 8px);
+        background-size: 200% 200%;
+        animation: box-stripes 40s linear infinite;
+    }
 
-@keyframes stripes {
+@keyframes box-stripes {
     100% {
         background-position: 100% 100%;
     }
 }
 
-.element {
-    background: repeating-linear-gradient(
-        0deg,
-        #606dbc,
-        #606dbc 10px,
-        #465298 10px,
-        #465298 20px
+#body-bg {
+    background-image: 
+    repeating-linear-gradient(
+        40deg, 
+        transparent, 
+        transparent 5px,
+        rgb(43, 46, 83) 5px,
+        rgb(0, 0, 0) 10px
     );
+        background-size: 200% 200%;
+        animation: body-stripes 500s linear infinite;
+    }
+
+@keyframes body-stripes {
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
+/*#body-bg {
+    background: 
+    repeating-linear-gradient(
+        to bottom,
+        transparent 10px,
+        rgb(43, 46, 86) 10px,
+        rgb(0, 0, 0) 20px);
+        background-size: 200% 200%;
+        animation: body-stripes 1000s infinite linear;
+}
 
+@keyframes body-stripes {
+    0% {
+        background-position: 100% 100%; /*OR bottom right*//*
+    }
+
+    100% {
+        background-position: 0 0; /*OR top left*//*
+    }
+}*/
 
 #search-box {
     background: rgb(156, 83, 10);
@@ -204,7 +235,10 @@ section.act-branch img {
 
 ::placeholder { color: rgb(255, 167, 79); font-family: VT323; }
 
-/*
+
+
+
+
 .rotating-dashed {
     position: relative;
     margin: 40px auto;
@@ -249,8 +283,8 @@ section.act-branch img {
     left: 0;
     top: 0;
     width: 200%;
-    border-bottom: 5px dashed;
-    animation: slideDash 2.5s infinite linear;
+    border-bottom: 15px grey dashed;
+    animation: slideDash 5s infinite linear;
 }
 
 .rotating-dashed strong {
@@ -271,59 +305,3 @@ section.act-branch img {
       transform: translateX(0%);
     }
 }
-
-
-
-
-
-
-
-/*
-$h1:  rgba(45,45,45,1);
-$blue: #98b5cc;
-$yellow: #ffcc00;
-$outline: rgba(#fff, .4);
-$shadow: rgba($yellow, .5);
-html,
-body {
-	background: linear-gradient(45deg, rgba(45,45,45,1) 9%,rgba(0,0,0,1) 100%);
-	width: 100%;
-	height: 100%;
-}
-
-h1 {
-	font-family: 'CoreCircus', sans-serif;
-	font-size: 14vw;
-	text-align: center;
-	line-height: 1;
-	margin: 0;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	position: absolute;
-	color: $h1;
-	
-	&:before {
-		content: attr(data-heading);
-		position: absolute;
-		overflow: hidden;
-		color: rgb(244,161,79);
-		width: 100%;
-		z-index: 5;
-		text-shadow: none;
-		left: 27%;
-		text-align: left;
-		animation: flicker 3s linear infinite;
-	}
-}
-
-@keyframes flicker {
-	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-		opacity: .99;
-		text-shadow: -1px -1px 0 $outline, 1px -1px 0 $outline, -1px 1px 0 $outline, 1px 1px 0 $outline, 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000;
-	}
-	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-		opacity: 0.4;
-		text-shadow: none;
-	}
-}*/
