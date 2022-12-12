@@ -1,3 +1,7 @@
+@keyframes stripes {
+    100% { background-position: 100% 100%; }
+}
+
 body {
     background-color: rgb(26,27,36);
     padding-top:200px;
@@ -5,7 +9,33 @@ body {
     color: rgb(244,161,79);
     font-family: VT323;
     cursor: url(../customCursors/InscryptionNormal.cur),default;
+    background-image: 
+        repeating-linear-gradient(
+            40deg,
+            transparent, 
+            transparent 5px,
+            rgb(43, 46, 83) 5px,
+            rgb(0, 0, 0) 10px);
+    background-size: 200% 200%;
+    animation: stripes 400s linear infinite;
 }
+
+a {
+    display:inline-block;
+    text-decoration: none;
+    color: rgb(244,161,79);
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(214, 118, 22);
+    cursor: url(../customCursors/InscryptionLink.cur),pointer;
+    transform: scale(1.2);
+}
+
+
+
+
 
 header {
     background-color: rgb(109,65,46);
@@ -16,13 +46,6 @@ header {
     overflow: hidden;
     z-index: 1;
     border-bottom: solid black 4px;
-}
-
-#header-border {
-    border-top: solid black 4px;
-    background-color: rgb(26,27,36);
-    height: 4px;
-    border-bottom: solid rgb(109,65,46) 4px;
 }
 
 ul {
@@ -38,163 +61,16 @@ li {
     font-size: xx-large;
 }
 
+@keyframes float-flicker {
+    0% { transform: translatey(0px); opacity: 1;}
+    33% { transform: translatey(15px); opacity: 0.7; }
+    66% { transform: translatey(-15px); opacity: 0.4 }
+    100% { transform: translatey(0px); opacity: 1;}
+}
+
 li:hover {
-    transform: translatey(0px);
-    animation: float 5s ease-in-out infinite;
+    animation: float-flicker 5s ease-in-out infinite;
 }
-
-a {
-    display:inline-block;
-    text-decoration: none;
-    color: rgb(244,161,79);
-    transition: 0.3s;
-}
-
-a:hover {
-    color: rgb(214, 118, 22);
-    cursor: url(../customCursors/InscryptionLink.cur),pointer;
-    transform: scale(1.2);
-}    
-
-h1 img {
-    display: block;
-    margin: 50px auto;
-    height: 125px;
-    transform: translatey(0px);
-    animation: float 5s ease-in-out infinite, flicker 5s infinite;
-}
-
-h2 {
-    display: inline-block;
-    font-size: 50px;
-    margin-left: 115px;
-}
-
-p {
-    font-size: 25px;
-    text-align: center;
-    margin: 0px 80px;
-}
-
-h1, h2, p {
-    transition: 0.3s;
-}
-
-h1:hover, p:hover {
-    cursor: url(../customCursors/InscryptionText2.cur),text;
-    transform: scale(1.05);
-}
-
-h2:hover {
-    transform: scale(1.3);
-}
-
-section {
-    margin-bottom: 50px;
-}
-
-section.act-main img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
-    margin-bottom: 30px;
-    cursor: url(../customCursors/InscryptionBusy.cur),auto;
-}
-
-section.act-branch {
-    background-color: rgb(109,65,46);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    border: dashed 15px grey;
-    padding: 20px;
-}
-
-section.act-branch img {
-    height: 327px;
-    cursor: url(../customCursors/InscryptionBusy.cur),auto;
-}
-
-
-
-@keyframes float {
-    0% { transform: translatey(0px); }
-    33% { transform: translatey(15px); }
-    66% { transform: translatey(-15px); }
-    100% { transform: translatey(0px); }
-}
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    16% { opacity: 0.82; }
-    32% { opacity: 0.66; }
-    50% { opacity: 0.5; }
-    67% { opacity: 0.66; }
-    83% { opacity: 0.82; }
-    100% { opacity: 1; }
-}
-
-
-
-.box-bg {
-    background-image: 
-    repeating-linear-gradient(
-        0deg, 
-        transparent, 
-        transparent 4px,
-        rgb(153, 103, 81) 4px,
-        rgb(70, 34, 19) 8px);
-        background-size: 200% 200%;
-        animation: box-stripes 40s linear infinite;
-    }
-
-@keyframes box-stripes {
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
-#body-bg {
-    background-image: 
-    repeating-linear-gradient(
-        40deg, 
-        transparent, 
-        transparent 5px,
-        rgb(43, 46, 83) 5px,
-        rgb(0, 0, 0) 10px
-    );
-        background-size: 200% 200%;
-        animation: body-stripes 500s linear infinite;
-    }
-
-@keyframes body-stripes {
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
-/*#body-bg {
-    background: 
-    repeating-linear-gradient(
-        to bottom,
-        transparent 10px,
-        rgb(43, 46, 86) 10px,
-        rgb(0, 0, 0) 20px);
-        background-size: 200% 200%;
-        animation: body-stripes 1000s infinite linear;
-}
-
-@keyframes body-stripes {
-    0% {
-        background-position: 100% 100%; /*OR bottom right*//*
-    }
-
-    100% {
-        background-position: 0 0; /*OR top left*//*
-    }
-}*/
 
 #search-box {
     background: rgb(156, 83, 10);
@@ -235,73 +111,173 @@ section.act-branch img {
 
 ::placeholder { color: rgb(255, 167, 79); font-family: VT323; }
 
-
-
-
-
-.rotating-dashed {
-    position: relative;
-    margin: 40px auto;
-    width: 90px;
-    height: 90px;
-    overflow: hidden;
-    color: #3498db;
+#header-border {
+    border-top: solid black 4px;
+    background-color: rgb(26,27,36);
+    height: 4px;
+    border-bottom: solid rgb(109,65,46) 4px;
 }
 
-.rotating-dashed:hover {
-    color: white;
-    cursor: pointer;
-    transition: all 0.5s;
-}
 
-.rotating-dashed .dashing {
+
+
+
+article img, section img { cursor: url(../customCursors/InscryptionBusy.cur),auto; }
+
+h1 img {
     display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    margin: 50px auto;
+    height: 175px;
+    transform: translatey(0px);
+    animation: float-flicker 5s ease-in-out infinite;
 }
 
-.rotating-dashed .dashing:nth-of-type(1) {
-    transform: rotate(0deg);
+h2 {
+    display: inline-block;
+    font-size: 75px;
+    margin: 20px 0 50px 115px;
 }
 
-.rotating-dashed .dashing:nth-of-type(2) {
-    transform: rotate(90deg);
-}
+h2:hover { transform: scale(1.3); }
 
-.rotating-dashed .dashing:nth-of-type(3) {
-    transform: rotate(180deg);
-}
+p { font-size: 35px; }
 
-.rotating-dashed .dashing:nth-of-type(4) {
-    transform: rotate(270deg);
-}
+p:hover { cursor: url(../customCursors/InscryptionText2.cur),text; }
 
-.rotating-dashed .dashing i {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 200%;
-    border-bottom: 15px grey dashed;
-    animation: slideDash 5s infinite linear;
-}
-
-.rotating-dashed strong {
-    display: block;
-    width: 95px;
-    line-height: 90px;
+section > p, article > p {
     text-align: center;
-    position: absolute;
-    font-size: 50px;
-    transform: rotate(90deg);
+    margin: 0px 100px;
 }
 
-@keyframes slideDash {
-    from {
-      transform: translateX(-50%);
-    }
-    to {
-      transform: translateX(0%);
-    }
+h1, h2, p, section > div { transition: 0.3s; }
+
+h1:hover, section > p:hover, article > p:hover { transform: scale(1.05); }
+
+section, section > div { margin-bottom: 60px; }
+
+section > div:hover { transform: scale(1.05); }
+
+.act-main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    margin-bottom: 45px;
+}
+
+.act-branch {
+    display: block;
+    margin-right: auto;
+    width: 70%;
+    padding: 45px;
+}
+
+.act-branch img { height: 327px; }
+
+.float-right { margin-left: 18%; }
+
+.float-right img { float: right; }
+
+.float-left { margin-left: 8%; }
+
+.float-left img { float: left; margin-right: 20px; }
+
+
+
+
+
+@font-face {
+    font-family: DeadByDaylight;
+    src: url(../customFonts/who\ asks\ satan.ttf);
+    src: url(../customFonts/DEADLY\ KILLERS.ttf);
+}
+
+@font-face {
+    font-family: Skyrim;
+    src: url(../customFonts/Skyrim.ttf);
+}
+
+@font-face {
+    font-family: Undertale;
+    src: url(../customFonts/MonsterFriend2/MonsterFriend2/MonsterFriend2Back.otf);
+}
+
+aside {
+    background-color: rgb(146, 62, 26);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    margin-bottom: 70px;
+}
+
+
+
+
+
+footer {
+    font-size: xx-large;
+    background-color: rgb(109,65,46);
+    margin-bottom: 0;
+    width: 100%;
+    border-top: solid black 4px;
+}
+
+#footer-border {
+    border-top: solid black 4px;
+    background-color: rgb(26,27,36);
+    height: 4px;
+    border-top: solid rgb(109,65,46) 4px;
+}
+
+
+
+
+
+/*#body-background {
+    background: 
+    repeating-linear-gradient(
+        to bottom,
+        transparent 20px,
+        rgb(43, 46, 86) 20px,
+        rgb(0, 0, 0) 20px);
+        background-size: 200% 200%;
+        animation: body-stripes 1000s infinite linear;
+}
+
+@keyframes body-stripes {
+    0% { background-position: 100% 100%; /*OR bottom right*//* }
+    100% { background-position: 0 0; /*OR top left*//* }
+}*/
+
+.box-background {
+    background-image: 
+        repeating-linear-gradient(
+            0deg, 
+            transparent, 
+            transparent 4px,
+            rgb(153, 103, 81) 4px,
+            rgb(70, 34, 19) 8px);
+    background-size: 200% 200%;
+    animation: stripes 30s linear infinite;
+}
+
+.rotating-border {
+    background-image: 
+        repeating-linear-gradient(-20deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
+        repeating-linear-gradient(70deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
+        repeating-linear-gradient(160deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
+        repeating-linear-gradient(250deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px);
+    background-size: 25px calc(100% + 75.56px), calc(100% + 75.56px) 25px, 25px calc(100% + 75.56px) , calc(100% + 75.56px) 25px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    animation: borderAnimation 1.5s infinite linear;
+}
+
+@keyframes borderAnimation {
+    from { background-position: 0 0, -75.56px 0, 100% -75.56px, 0 100%; }
+    to { background-position: 0 -75.56px, 0 0, 100% 0, -75.56px 100%; }
 }
