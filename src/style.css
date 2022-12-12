@@ -68,7 +68,7 @@ li {
     100% { transform: translatey(0px); opacity: 1;}
 }
 
-li:hover {
+header li:hover, footer li:hover {
     animation: float-flicker 5s ease-in-out infinite;
 }
 
@@ -187,23 +187,17 @@ section > div:hover { transform: scale(1.05); }
 
 
 @font-face {
-    font-family: DeadByDaylight;
-    src: url(../customFonts/who\ asks\ satan.ttf);
-    src: url(../customFonts/DEADLY\ KILLERS.ttf);
-}
-
-@font-face {
     font-family: Skyrim;
     src: url(../customFonts/Skyrim.ttf);
 }
 
 @font-face {
     font-family: Undertale;
-    src: url(../customFonts/MonsterFriend2/MonsterFriend2/MonsterFriend2Back.otf);
+    src: url(../customFonts/Undertale.otf);
 }
 
 aside {
-    background-color: rgb(146, 62, 26);
+    background-color: black;
     top: 0;
     left: 0;
     width: 100%;
@@ -214,7 +208,9 @@ aside {
     margin-bottom: 70px;
 }
 
+aside a { color: white; }
 
+aside a:hover { color: grey; }
 
 
 
