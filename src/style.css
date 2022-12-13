@@ -250,26 +250,29 @@ footer {
     border-top: solid rgb(109,65,46) 4px;
 }
 
-footer div:nth-child(2) {
+footer ul { display: inline-block; }
+
+footer ul:nth-child(2) {
+    /*position: fixed;*/
     width: 60%;
     float: left;
     justify-content: space-between;
     align-items: center;
 }
 
-footer div ul:first-child { float: left; }
+footer ul ul:last-child { float: right; }
 
-footer div ul:last-child { float: right; }
+footer ul ul:first-child { float: left; }
 
-footer > ul {
+footer ul:nth-child(3) {
     margin-bottom: 0;
+    padding-bottom: 50px;
+    /*position: fixed;*/
     width: 30%;
     float: right;
 }
 
-footer > ul img { height: 50px; margin: 15px; }
-
-
+footer ul:nth-child(3) img { height: 50px; margin: 15px; }
 
 
 
