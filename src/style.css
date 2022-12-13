@@ -40,11 +40,11 @@ a:hover {
 header {
     background-color: rgb(109,65,46);
     position: fixed;
+    z-index: 1;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
-    z-index: 1;
     border-bottom: solid black 4px;
 }
 
@@ -68,7 +68,9 @@ li {
     100% { transform: translatey(0px); opacity: 1;}
 }
 
-header li:hover, footer li:hover {
+header img { height: 100px; }
+
+header li:hover, footer ul:nth-child(2) li:hover {
     animation: float-flicker 5s ease-in-out infinite;
 }
 
@@ -149,6 +151,11 @@ section > p, article > p {
     margin: 0px 100px;
 }
 
+section .box-background {
+    background-color: rgb(109,65,46);
+    padding: 20px;
+}
+
 h1, h2, p, section > div { transition: 0.3s; }
 
 h1:hover, section > p:hover, article > p:hover { transform: scale(1.05); }
@@ -198,27 +205,41 @@ section > div:hover { transform: scale(1.05); }
 
 aside {
     background-color: black;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: xx-large;
-    margin-bottom: 70px;
+    padding: 50px;
+    text-align: center;
 }
 
-aside a { color: white; }
+h3 {
+    font-size: 75px;
+    color: white;
+    margin-top: 0;
+}
+
+aside img { display: inline-block; height: 250px; }
+
+aside a { color: white; font-size: 30px;}
 
 aside a:hover { color: grey; }
+
+aside li:first-child { font-family: Skyrim; }
+
+aside li:first-child a:hover { cursor: url(../customCursors/Skyrim-normal.cur),pointer; }
+
+aside li:nth-child(2) { font-family: Roboto; }
+
+aside li:nth-child(2) a:hover { cursor: pointer; }
+
+aside li:last-child { font-family: Undertale; }
+
+aside li:last-child a:hover { cursor: url(../customCursors/Undertale\ Soul\ Normal\ Select.cur),pointer; }
+
+
 
 
 
 footer {
     font-size: xx-large;
-    background-color: rgb(109,65,46);
-    margin-bottom: 0;
-    width: 100%;
+    background-color: rgb(99, 32, 4);
     border-top: solid black 4px;
 }
 
@@ -229,7 +250,21 @@ footer {
     border-top: solid rgb(109,65,46) 4px;
 }
 
+footer ul:nth-child(2) {
+    /*position: fixed;*/
+    width: 50%;
+    left: 0;
+}
 
+footer ul:nth-child(3) {
+    margin-bottom: 0;
+    padding-bottom: 50px;
+    /*position: fixed;*/
+    width: 50%;
+    right: 0;
+}
+
+footer ul:nth-child(3) img { height: 50px; margin: 15px; }
 
 
 
