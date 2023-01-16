@@ -1,3 +1,19 @@
+.line-0 {
+    transform: rotate(45deg) translate(4.5px, 12px);
+}
+
+.line-1 {
+    transform: scale(0);
+}
+
+.line-2 {
+    transform: rotate(-45deg) translateY(-7.5px);
+}
+
+.sidebar {
+    transform: translateX(0px);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -34,15 +50,7 @@
     display: none;
 }
 
-@media screen and (max-width: 767px) {
-
-    .btn {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 20px;
-        padding-top: 20px;
-    }
+@media (max-width: 767px) {
 
     .elements {
 
@@ -56,4 +64,11 @@
         transform: translateX(-100%);
     }
 
+    .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+        padding-top: 20px;
+    }
 }
