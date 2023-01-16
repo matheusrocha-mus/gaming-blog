@@ -1,384 +1,59 @@
-body {
-    background-color: rgb(26,27,36);
-    padding-top:200px;
+* {
     margin: 0;
-    color: rgb(244,161,79);
-    font-family: VT323;
-    cursor: url(../customCursors/inscryptionNormal.cur),default;
-    background-image: 
-        repeating-linear-gradient(
-            45deg,
-            transparent, 
-            transparent 5px,
-            rgb(43, 46, 83) 5px,
-            rgb(0, 0, 0) 10px);
-    background-size: 200% 200%;
-    animation: stripes 400s linear infinite;
+    padding: 0;
 }
 
-a {
-    display:inline-block;
-    text-decoration: none;
-    color: rgb(244,161,79);
-    transition: 0.3s;
-}
-
-a:hover {
-    color: rgb(214, 118, 22);
-    cursor: url(../customCursors/inscryptionLink.cur),pointer;
-    transform: scale(1.2);
-}
-
-
-
-
-
-header {
-    background-color: rgb(109,65,46);
-    position: fixed;
-    z-index: 1;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: solid black 4px;
-}
-
-ul {
+.elements {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Verdana';
+    background-color: #89a0ce;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 125px;
-    font-size: xx-large;
+.lines {
+    cursor: pointer;
 }
 
-@keyframes float-flicker {
-    0% { transform: translatey(0px); opacity: 1;}
-    33% { transform: translatey(15px); opacity: 0.7; }
-    66% { transform: translatey(-15px); opacity: 0.4 }
-    100% { transform: translatey(0px); opacity: 1;}
-}
-
-header img { height: 100px; }
-
-header li:hover, footer ul:nth-child(2) li:hover {
-    animation: float-flicker 5s ease-in-out infinite;
-}
-
-#search-box {
-    background: rgb(156, 83, 10);
-    height: 30px;
-    border-radius: 50px;
-    padding: 10px;
-}
-
-#search-input {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: rgb(255, 167, 79);
-  font-size: 20px;
-  transition: 0.4s;
-  line-height: 30px;
-  width: 0;
-}
-
-#search-box:hover > #search-input { width: 250px; padding: 0 7px; }
-
-#search-btn {
-    color: rgb(255, 167, 79);
-    float: right;
+.span {
     width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: rgb(156, 83, 10);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 2s;
-}
-
-.fa-search { background: rgb(156, 83, 10); font-size: 24px; }
-
-::placeholder { color: rgb(255, 167, 79); font-family: VT323; }
-
-.bottom-border {
-    border-top: solid black 4px;
-    background-color: rgb(26,27,36);
     height: 4px;
-    border-bottom: solid rgb(109,65,46) 4px;
-}
-
-
-
-
-
-nav {
-    border-top: rgb(109,65,46) 4px;
-    margin-top: 50px;
     background-color: black;
-    padding: 5px;
-    border-bottom: rgb(109,65,46) 4px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.top-border {
-    border-top: solid rgb(109,65,46) 4px;
-    background-color: rgb(26,27,36);
-    height: 4px;
-    border-bottom: solid black 4px;
+.btn {
+    display: none;
 }
 
-nav div { margin: 0 -5px; }
+@media screen and (max-width: 767px) {
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+        padding-top: 20px;
+    }
+
+    .elements {
+
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        margin: 0;
+        padding: 20px;
+        width: 35%;
+        height: 100%;
+        transform: translateX(-100%);
+    }
 
-nav ul {
-    justify-content: right; 
-    align-items: center;
-}
-
-nav li { font-size: 50px; }
-
-aside a, nav a { color: white; }
-
-aside a:hover, nav a:hover { color: grey; }
-
-
-
-
-
-article img, section img { cursor: url(../customCursors/inscryptionBusy.cur),auto; }
-
-h1 img {
-    display: block;
-    margin: 50px auto;
-    height: 175px;
-    transform: translatey(0px);
-    animation: float-flicker 5s ease-in-out infinite;
-}
-
-h2 {
-    display: inline-block;
-    font-size: 75px;
-    margin: 20px 0 50px 115px;
-}
-
-h2:hover { transform: scale(1.3); }
-
-p { font-size: 35px; }
-
-p:hover, h2:hover, h3:hover { cursor: url(../customCursors/inscryptionText2.cur),text; }
-
-section > p, article > p {
-    text-align: center;
-    margin: 0px 100px;
-}
-
-section .box-background {
-    background-color: rgb(109,65,46);
-    padding: 20px;
-}
-
-h1, h2, p, section > div { transition: 0.3s; }
-
-h1:hover, section > p:hover, article > p:hover { transform: scale(1.05); }
-
-section, section > div { margin-bottom: 60px; }
-
-section > div:hover { transform: scale(1.05); }
-
-.act-main img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
-    margin-bottom: 45px;
-}
-
-.act-branch {
-    display: block;
-    margin-right: auto;
-    width: 70%;
-    padding: 45px;
-}
-
-.act-branch img { height: 327px; }
-
-.float-right { margin-left: 18%; }
-
-.float-right img { float: right; }
-
-.float-left { margin-left: 8%; }
-
-.float-left img { float: left; margin-right: 20px; }
-
-
-
-
-
-@font-face {
-    font-family: Skyrim;
-    src: url(../customFonts/Skyrim.ttf);
-}
-
-@font-face {
-    font-family: Undertale;
-    src: url(../customFonts/Undertale.otf);
-}
-
-aside {
-    background-color: black;
-    padding: 50px 50px 50px 50px;
-    text-align: center;
-}
-
-aside > div { margin: -50px }
-
-aside > div:first-child { display: block; }
-
-aside > div:last-child { margin-bottom: -45px; }
-
-h3 {
-    font-size: 75px;
-    color: white;
-}
-
-aside ul { padding-left: 0; }
-
-aside img { display: inline-block; height: 250px; }
-
-aside a { font-size: 30px; }
-
-aside li:first-child { font-family: Skyrim; }
-
-aside li:first-child a:hover { cursor: url(../customCursors/skyrimNormal.cur),pointer; }
-
-aside li:nth-child(2) { font-family: Roboto; }
-
-aside li:nth-child(2) a:hover { cursor: url(../customCursors/dbdNormal.cur),pointer; }
-
-aside li:last-child { font-family: Undertale; }
-
-aside li:last-child a:hover { cursor: url(../customCursors/undertaleNormal.cur),pointer; }
-
-aside li:last-child {margin-right: 0;}
-
-aside div { margin-top: 20px; }
-
-
-
-
-
-footer {
-    font-size: xx-large;
-    background-color: rgb(109,65,46);
-    border-top: solid black 4px;
-    overflow: hidden;
-}
-
-#footer-border {
-    border-top: solid black 4px;
-    background-color: rgb(26,27,36);
-    height: 4px;
-    border-top: solid rgb(109,65,46) 4px;
-}
-
-footer ul { display: block; }
-
-footer div:nth-child(2) {
-    width: 60%;
-    float: left;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer div ul:first-child { float: left; }
-
-footer div ul:last-child { float: right; }
-
-footer ul:last-child div { padding-bottom: 25px; }
-
-footer > ul {
-    margin-bottom: 0;
-    width: 30%;
-    float: right;
-}
-
-footer > ul img { height: 50px; }
-
-footer ul:last-child li { padding: 10px; }
-
-footer ul:last-child li:last-child img { border-radius: 10px; }
-
-footer ul:last-child li:first-child, footer ul:last-child li:nth-child(2), footer ul:last-child li:nth-child(3) { margin-right: 75px; }
-
-footer ul:last-child li:nth-child(5), footer ul:last-child li:last-child { margin-left: 75px; }
-
-
-
-
-
-/*#body-background {
-    background: 
-    repeating-linear-gradient(
-        to bottom,
-        transparent 20px,
-        rgb(43, 46, 86) 20px,
-        rgb(0, 0, 0) 20px);
-        background-size: 200% 200%;
-        animation: body-stripes 1000s infinite linear;
-}
-
-@keyframes body-stripes {
-    0% { background-position: 100% 100%; /*OR bottom right*//* }
-    100% { background-position: 0 0; /*OR top left*//* }
-}*/
-
-.box-background {
-    background-image: 
-        repeating-linear-gradient(
-            0deg, 
-            transparent, 
-            transparent 4px,
-            rgb(153, 103, 81) 4px,
-            rgb(70, 34, 19) 8px);
-    background-size: 200% 200%;
-    animation: stripes 30s linear infinite;
-}
-
-.box-background-2 {
-    background-image: 
-        repeating-linear-gradient(
-            135deg,
-            transparent, 
-            transparent 5px,
-            rgb(25, 25, 27) 10px);
-    background-size: 200% 200%;
-    animation: stripes 30s linear infinite;
-}
-
-@keyframes stripes {
-    100% { background-position: 100% 100%; }
-}
-
-.rotating-border {
-    background-image: 
-        repeating-linear-gradient(-20deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
-        repeating-linear-gradient(70deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
-        repeating-linear-gradient(160deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
-        repeating-linear-gradient(250deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px);
-    background-size: 25px calc(100% + 75.56px), calc(100% + 75.56px) 25px, 25px calc(100% + 75.56px) , calc(100% + 75.56px) 25px;
-    background-position: 0 0, 0 0, 100% 0, 0 100%;
-    background-repeat: no-repeat;
-    animation: borderAnimation 1.5s infinite linear;
-}
-
-@keyframes borderAnimation {
-    from { background-position: 0 0, -75.56px 0, 100% -75.56px, 0 100%; }
-    to { background-position: 0 -75.56px, 0 0, 100% 0, -75.56px 100%; }
 }
