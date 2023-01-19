@@ -2,42 +2,102 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Matheus Caetano Rocha, https://github.com/matheusrocha-mus">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" href="../images/card-icon.png">
-    <title>TelaInicial</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Matheus Caetano Rocha, https://github.com/matheusrocha-mus">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="../images/card-icon.png">
+  <title>TelaInicial</title>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <ul class="elements">
-            <!-- <li class="nav-el"><a href="https://www.instagram.com/matheusrocha_mus" target="_blank">
+  <!-- Navegation bar -->
+
+  <nav class="navbar">
+    <div class="topnav">
+      <ul class="elements">
+        <!-- <li class="nav-el"><a href="https://www.instagram.com/matheusrocha_mus" target="_blank">
                     <img src="../images/matheusrocha-logo.png" alt="matheusrocha-logo"></a></li> -->
-            <li class="nav-el">Home</li>
-            <li class="nav-el">News</li>
-            <li class="nav-el">About</li>
-            <li class="nav-el">Contact</li>
-            <!-- <li class="nav-el" id="search-box"><input id="search-input" type="text" placeholder="Search"><a
-                    href="../images/shrek.png" target="_blank" id="search-btn"><i class="fas fa-search"></i></a></li> -->
-        </ul>
-        <div class="btn">
-            <div class="lines">
-                <div class="span"></div>
-                <div class="span"></div>
-                <div class="span"></div>
-                <div class="span"></div>
-            </div>
+        <li><a class="active" href="#HOME">Home</a></li>
+        <li><a href="#News">News</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><input type="text" placeholder="Search"><a href="../images/shrek.png" target="_blank" id="search-btn"></a>
+        </li>
+        <li>
+
+      </ul>
+    </div>
+    <div class="btn">
+      <div class="lines">
+        <div class="span"></div>
+        <div class="span"></div>
+        <div class="span"></div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Games Card's -->
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+
+        <img class="banner-img" src="./skyrim/img/Skyrim-template-1200x1476.webp">
+        <h4><b>SKYRIM</b></h4>
+        <div class="plataform-logo">
+          <img src="/images/pc-game-outlined-black.webp">
+          <img src="/images/playstation-black.webp">
+          <img src="/images/xbox-black.webp">
         </div>
-    </nav>
-    <script src="script.js"></script>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img class="banner-img" src="./inscryption/img/Inscryption-template_1200x1600.jpg">
+        <h4><b>INSCRYPTION</b></h4>
+        <div class="plataform-logo">
+          <img src="/images/pc-game-outlined-black.webp">
+          <img src="/images/playstation-black.webp">
+          <img src="/images/xbox-black.webp">
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img class="banner-img" src="./dead-by-daylight/img/Dead_By_Daylight-logo.png">
+        <h4><b>DEAD BY DAYLIGHT</b></h4>
+        <div class="plataform-logo">
+          <img src="/images/pc-game-outlined-black.webp">
+          <img src="/images/playstation-black.webp">
+          <img src="/images/xbox-black.webp">
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img class="banner-img" src="./undertale/img/undertale-logo.jpg">
+        <h4><b>UNDERTALE</b></h4>
+        <div class="plataform-logo">
+          <img src="/images/pc-game-outlined-black.webp">
+          <img src="/images/playstation-black.webp">
+          <img src="/images/xbox-black.webp">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>
