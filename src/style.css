@@ -1,3 +1,5 @@
+/* Style Sidebar */
+
 .line-0 {
     transform: rotate(45deg) translate(4.5px, 12px);
 }
@@ -10,27 +12,61 @@
     transform: rotate(-45deg) translateY(-7.5px);
 }
 
-.sidebar {
-    transform: translateX(0px);
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
 .elements {
+
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: whitesmoke;
     font-weight: 500;
     font-size: 20px;
     font-family: 'Verdana';
-    background-color: #89a0ce;
+    background-color: #313131;
     transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    font-weight: bold;
+    font-style: oblique;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Style the "active" element to highlight the current page */
+
+.topnav a.active {
+    font-weight: bold;
+    font-style: oblique;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Style the search box inside the navigation bar */
+
+.topnav input[type=text] {
+
+    border-radius: 18px;
+    margin-right: none;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
 }
 
 .lines {
@@ -50,6 +86,79 @@
     display: none;
 }
 
+
+/* Games card's */
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 10px 30px 50px 10px rgb(0, 0, 0);
+}
+
+/* Sizing the images */
+
+.banner-img {
+
+    height: auto; 
+    width: 100%; 
+    object-fit: contain;
+    border-radius: 15px 15px 0px 0px; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #313131cb;
+    opacity: 0.8;
+}
+
+/* Plataform Logo */
+
+.plataform-logo {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.card {
+    
+    border-radius: 15px ;
+    padding: 15px 15px auto 15px;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+    /* this adds the "card" effect */
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* Mobile Configuration */
+
 @media (max-width: 767px) {
 
     .elements {
@@ -64,6 +173,10 @@
         transform: translateX(-100%);
     }
 
+    .sidebar {
+        transform: translateX(0px);
+    }
+
     .btn {
         display: flex;
         flex-direction: column;
@@ -71,4 +184,19 @@
         margin-left: 20px;
         padding-top: 20px;
     }
+
+    /* Responsive columns */
+
+    .column {
+        margin-left: 5em;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .topnav input[type=text] {
+
+        width: 8em;
+    }
+
 }
