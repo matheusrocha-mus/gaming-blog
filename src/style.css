@@ -1,5 +1,6 @@
-.background {
-    
+body {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(62, 62, 62);
 }
 
@@ -22,7 +23,7 @@
 }
 
 * {
-    
+
     margin: 0;
     padding: 0;
 }
@@ -36,7 +37,6 @@
     padding-bottom: 10px;
     font-weight: 500;
     font-size: 20px;
-    font-family: 'Verdana';
     background-color: #313131;
     transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -50,6 +50,7 @@ a {
 }
 
 .topnav a {
+
     color: whitesmoke;
     text-decoration: none;
 }
@@ -58,6 +59,7 @@ a {
 /* Change the color of links on hover */
 
 .topnav a:hover {
+
     font-weight: bold;
     font-style: oblique;
     color: rgb(255, 255, 255);
@@ -67,6 +69,7 @@ a {
 /* Style the "active" element to highlight the current page */
 
 .topnav a.active {
+
     font-weight: bold;
     font-style: oblique;
     color: rgb(255, 255, 255);
@@ -85,10 +88,12 @@ a {
 }
 
 .lines {
+
     cursor: pointer;
 }
 
 .span {
+
     width: 30px;
     height: 4px;
     background-color: black;
@@ -98,6 +103,7 @@ a {
 }
 
 .btn {
+
     display: none;
 }
 
@@ -106,7 +112,8 @@ a {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 10px 30px 50px 10px rgb(0, 0, 0);
+
+    box-shadow: 0 12px 15px 0 rgb(0, 0, 0);
 }
 
 /* Sizing the images */
@@ -133,11 +140,7 @@ a {
 .card {
 
     border-radius: 15px;
-    margin-top: 5em;
-    margin-left: auto;
-    margin-right: auto;
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
-    /* this adds the "card" effect */
     text-align: center;
     background-color: #ffffff5c;
 }
@@ -156,8 +159,21 @@ a {
 
 .cards>.card>a>img {
 
-    width: 275px; 
+    width: 275px;
     height: auto;
+}
+
+/* flouting card's */
+
+@keyframes float {
+    0% { transform: translatey(0px)}
+    33% { transform: translatey(15px)}
+    66% { transform: translatey(-15px)}
+    100% { transform: translatey(0px)}
+}
+
+.card:hover {
+    animation: float 5s ease-in-out infinite;
 }
 
 /* Mobile Configuration */
@@ -177,10 +193,12 @@ a {
     }
 
     .sidebar {
+
         transform: translateX(0px);
     }
 
     .btn {
+
         display: flex;
         flex-direction: column;
         align-items: flex-start;
