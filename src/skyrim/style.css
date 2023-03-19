@@ -17,6 +17,8 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.3;
+    z-index: -1;
+    object-fit: cover;
 }
 
 #bg-video {
@@ -42,7 +44,7 @@ a:hover {
     transform: scale(1.2);
 }
 
-header {
+nav {
     background-color: #808080;
     position: fixed;
     z-index: 1;
@@ -50,7 +52,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: solid black 5px;
 }
 
 ul {
@@ -62,17 +63,17 @@ ul {
 li {
     list-style-type: none;
     display: inline-block;
-    margin-right: 125px;
-    font-size: xx-large;
+    margin-right: 7.5vw;
+    font-size: 2rem;
 }
 
-header img { height: 100px; }
+nav li>a>img { height: 5vw; }
 
 #search-box {
     background: #dadada;
-    height: 30px;
-    border-radius: 50px;
-    padding: 10px;
+    height: 1.5vw;
+    border-radius: 2.5vw;
+    padding: 0.5vw;
 }
 
 #search-input {
@@ -82,19 +83,19 @@ header img { height: 100px; }
   float: left;
   padding: 0;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1.25rem;
   transition: 0.4s;
-  line-height: 30px;
+  line-height: 1.5vw;
   width: 0;
 }
 
-#search-box:hover > #search-input { width: 250px; padding: 0 7px; }
+#search-box:hover > #search-input { width: 12.5vw; padding: 0 0.35vw; }
 
 #search-btn {
     color: #ffffff;
     float: right;
-    width: 30px;
-    height: 30px;
+    width: 1.5vw;
+    height: 1.5vw;
     border-radius: 50%;
     background: #dadada;
     display: flex;
@@ -103,6 +104,6 @@ header img { height: 100px; }
     transition: 2s;
 }
 
-.fa-search { background: #dadada; font-size: 24px; }
+.fa-search { background: #dadada; font-size: 1.6rem; }
 
-::placeholder { color: #ffffff; font-family: VT323; }
+::placeholder { color: #ffffff; font-family: Skyrim; }

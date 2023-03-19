@@ -1,17 +1,17 @@
 body {
     background-color: rgb(26,27,36);
-    padding-top:200px;
+    padding-top: 10vw;
     margin: 0;
-    color: rgb(244,161,79);
+    color: #f4a14f;
     font-family: VT323;
     cursor: url(/customCursors/inscryptionNormal.cur),default;
     background-image: 
         repeating-linear-gradient(
             45deg,
             transparent, 
-            transparent 5px,
-            rgb(43, 46, 83) 5px,
-            rgb(0, 0, 0) 10px);
+            transparent 0.25vw,
+            #2b2e53 0.25vw,
+            #000000 0.5vw);
     background-size: 200% 200%;
     animation: stripes 400s linear infinite;
 }
@@ -19,12 +19,12 @@ body {
 a {
     display:inline-block;
     text-decoration: none;
-    color: rgb(244,161,79);
+    color: #f4a14f;
     transition: 0.3s;
 }
 
 a:hover {
-    color: rgb(214, 118, 22);
+    color: #d67616;
     cursor: url(/customCursors/inscryptionLink.cur),pointer;
     transform: scale(1.2);
 }
@@ -34,14 +34,14 @@ a:hover {
 
 
 header {
-    background-color: rgb(109,65,46);
+    background-color: #6d412e;
     position: fixed;
     z-index: 1;
     overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: solid black 4px;
+    border-bottom: solid #000000 0.2vw;
 }
 
 @keyframes stripes {
@@ -53,9 +53,9 @@ header {
         repeating-linear-gradient(
             0deg, 
             transparent, 
-            transparent 4px,
-            rgb(153, 103, 81) 4px,
-            rgb(70, 34, 19) 8px);
+            transparent 0.2vw,
+            #996751 0.2vw,
+            #462213 0.4vw);
     background-size: 200% 200%;
     animation: stripes 30s linear infinite;
 }
@@ -69,28 +69,28 @@ ul {
 li {
     list-style-type: none;
     display: inline-block;
-    margin-right: 125px;
-    font-size: xx-large;
+    margin-right: 7vw;
+    font-size: 2rem;
 }
 
 @keyframes float-flicker {
-    0% { transform: translatey(0px); opacity: 1;}
-    33% { transform: translatey(15px); opacity: 0.7; }
-    66% { transform: translatey(-15px); opacity: 0.4 }
-    100% { transform: translatey(0px); opacity: 1;}
+    0% { transform: translatey(0); opacity: 1;}
+    33% { transform: translatey(0.75vw); opacity: 0.7; }
+    66% { transform: translatey(-0.75vw); opacity: 0.4 }
+    100% { transform: translatey(0); opacity: 1;}
 }
 
-header img { height: 100px; }
+header img { height: 5vw; }
 
 header li:hover, footer ul:nth-child(2) li:hover {
     animation: float-flicker 5s ease-in-out infinite;
 }
 
 #search-box {
-    background: rgb(156, 83, 10);
-    height: 30px;
-    border-radius: 50px;
-    padding: 10px;
+    background: #9c530a;
+    height: 1.5vw;
+    border-radius: 2.5vw;
+    padding: 0.5vw;
 }
 
 #search-input {
@@ -99,37 +99,37 @@ header li:hover, footer ul:nth-child(2) li:hover {
   outline: none;
   float: left;
   padding: 0;
-  color: rgb(255, 167, 79);
-  font-size: 20px;
+  color: #ffa74f;
+  font-size: 1.25rem;
   transition: 0.4s;
-  line-height: 30px;
+  line-height: 1.5vw;
   width: 0;
 }
 
-#search-box:hover > #search-input { width: 250px; padding: 0 7px; }
+#search-box:hover > #search-input { width: 12.5vw; padding: 0 0.35vw; }
 
 #search-btn {
-    color: rgb(255, 167, 79);
+    color: #ffa74f;
     float: right;
-    width: 30px;
-    height: 30px;
+    width: 1.5vw;
+    height: 1.5vw;
     border-radius: 50%;
-    background: rgb(156, 83, 10);
+    background: #9c530a;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 2s;
 }
 
-.fa-search { background: rgb(156, 83, 10); font-size: 24px; }
+.fa-search { background: #9c530a; font-size: 1.6rem; }
 
-::placeholder { color: rgb(255, 167, 79); font-family: VT323; }
+::placeholder { color: #ffa74f; font-family: VT323; }
 
 .bottom-border {
-    border-top: solid black 4px;
-    background-color: rgb(26,27,36);
-    height: 4px;
-    border-bottom: solid rgb(109,65,46) 4px;
+    border-top: solid #000000 0.2vw;
+    background-color: #1a1b24;
+    height: 0.2vw;
+    border-bottom: solid #6d412e 0.2vw;
 }
 
 
@@ -137,11 +137,11 @@ header li:hover, footer ul:nth-child(2) li:hover {
 
 
 nav {
-    border-top: rgb(109,65,46) 4px;
-    margin-top: 50px;
-    background-color: black;
-    padding: 5px;
-    border-bottom: rgb(109,65,46) 4px;
+    border-top: #6d412e 0.2vw;
+    margin-top: 2.5vw;
+    background-color: #000000;
+    padding: 0.25vw;
+    border-bottom: #6d412e 0.2vw;
 }
 
 .box-background-2 {
@@ -149,31 +149,31 @@ nav {
         repeating-linear-gradient(
             135deg,
             transparent, 
-            transparent 5px,
-            rgb(25, 25, 27) 10px);
+            transparent 0.25vw,
+            #19191b 0.5vw);
     background-size: 200% 200%;
     animation: stripes 30s linear infinite;
 }
 
 .top-border {
-    border-top: solid rgb(109,65,46) 4px;
-    background-color: rgb(26,27,36);
-    height: 4px;
-    border-bottom: solid black 4px;
+    border-top: solid #6d412e 0.2vw;
+    background-color: #1a1b24;
+    height: 0.2vw;
+    border-bottom: solid #000000 0.2vw;
 }
 
-nav div { margin: 0 -5px; }
+nav div { margin: 0 -0.25vw; }
 
 nav ul {
     justify-content: right; 
     align-items: center;
 }
 
-nav li { font-size: 50px; }
+nav li { font-size: 3.33rem; }
 
-aside a, nav a { color: white; }
+aside a, nav a { color: #ffffff; }
 
-aside a:hover, nav a:hover { color: grey; }
+aside a:hover, nav a:hover { color: #808080; }
 
 
 
@@ -183,56 +183,56 @@ article img, section img { cursor: url(/customCursors/inscryptionBusy.cur),auto;
 
 h1 img {
     display: block;
-    margin: 50px auto;
-    height: 175px;
-    transform: translatey(0px);
+    margin: 2.5vw auto;
+    height: 8.75vw;
+    transform: translatey(0);
     animation: float-flicker 5s ease-in-out infinite;
 }
 
 h2 {
     display: inline-block;
-    font-size: 75px;
-    margin: 20px 0 50px 115px;
+    font-size: 3.75vw;
+    margin: 1vw 0 2.5vw 5.75vw;
 }
 
 h2:hover { transform: scale(1.3); }
 
-p { font-size: 35px; }
+p { font-size: 2.2rem; }
 
 p:hover, h2:hover, h3:hover { cursor: url(/customCursors/inscryptionText2.cur),text; }
 
 section > p, article > p {
     text-align: center;
-    margin: 0px 100px;
+    margin: 0 5vw;
 }
 
 @keyframes borderAnimation {
-    from { background-position: 0 0, -75.56px 0, 100% -75.56px, 0 100%; }
-    to { background-position: 0 -75.56px, 0 0, 100% 0, -75.56px 100%; }
+    from { background-position: 0 0, -3.78vw 0, 100% -3.78vw, 0 100%; }
+    to { background-position: 0 -3.78vw, 0 0, 100% 0, -3.78vw 100%; }
 }
 
 .rotating-border {
     background-image: 
-        repeating-linear-gradient(-20deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
-        repeating-linear-gradient(70deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
-        repeating-linear-gradient(160deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px), 
-        repeating-linear-gradient(250deg, #525252, #afafaf 50px, transparent 50px, transparent 71px, #afafaf 71px);
-    background-size: 25px calc(100% + 75.56px), calc(100% + 75.56px) 25px, 25px calc(100% + 75.56px) , calc(100% + 75.56px) 25px;
+        repeating-linear-gradient(-20deg, #525252, #afafaf 2.5vw, transparent 2.5vw, transparent 3.55vw, #afafaf 3.55vw), 
+        repeating-linear-gradient(70deg, #525252, #afafaf 2.5vw, transparent 2.5vw, transparent 3.55vw, #afafaf 3.55vw), 
+        repeating-linear-gradient(160deg, #525252, #afafaf 2.5vw, transparent 2.5vw, transparent 3.55vw, #afafaf 3.55vw), 
+        repeating-linear-gradient(250deg, #525252, #afafaf 2.5vw, transparent 2.5vw, transparent 3.55vw, #afafaf 3.55vw);
+    background-size: 1.25vw calc(100% + 3.78vw), calc(100% + 3.78vw) 1.25vw, 1.25vw calc(100% + 3.78vw) , calc(100% + 3.78vw) 1.25vw;
     background-position: 0 0, 0 0, 100% 0, 0 100%;
     background-repeat: no-repeat;
     animation: borderAnimation 1.5s infinite linear;
 }
 
 section .box-background {
-    background-color: rgb(109,65,46);
-    padding: 20px;
+    background-color: #6d412e;
+    padding: 1vw;
 }
 
 h1, h2, p, section > div { transition: 0.3s; }
 
 h1:hover, section > p:hover, article > p:hover { transform: scale(1.05); }
 
-section, section > div { margin-bottom: 60px; }
+section, section > div { margin-bottom: 3vw; }
 
 section > div:hover { transform: scale(1.05); }
 
@@ -241,17 +241,17 @@ section > div:hover { transform: scale(1.05); }
     margin-left: auto;
     margin-right: auto;
     width: 85%;
-    margin-bottom: 45px;
+    margin-bottom: 2.25vw;
 }
 
 .act-branch {
     display: block;
     margin-right: auto;
     width: 70%;
-    padding: 45px;
+    padding: 2.25vw;
 }
 
-.act-branch img { height: 327px; }
+.act-branch img { height: 16.35vw; }
 
 .float-right { margin-left: 18%; }
 
@@ -259,7 +259,7 @@ section > div:hover { transform: scale(1.05); }
 
 .float-left { margin-left: 8%; }
 
-.float-left img { float: left; margin-right: 20px; }
+.float-left img { float: left; margin-right: 1vw; }
 
 
 
@@ -276,28 +276,28 @@ section > div:hover { transform: scale(1.05); }
 }
 
 aside {
-    background-color: black;
-    padding: 50px;
+    background-color: #000000;
+    padding: 2.5vw;
     text-align: center;
 }
 
-aside > div { margin-left: -50px; margin-right: -50px; }
+aside > div { margin-left: -2.5vw; margin-right: -2.5vw; }
 
-aside > div:first-child { margin-top: -45px; }
+aside > div:first-child { margin-top: -2.25vw; }
 
-aside > div:last-child { margin-bottom: -45px; }
+aside > div:last-child { margin-bottom: -2.25vw; }
 
 h3 {
-    font-size: 85px;
-    color: white;
-    margin-top: 30px;
+    font-size: 5.32rem;
+    color: #ffffff;
+    margin-top: 1.5vw;
 }
 
-aside ul { padding-left: 0; margin-bottom: 50px;}
+aside ul { padding-left: 0; margin-bottom: 2.5vw;}
 
-aside img { display: inline-block; height: 250px; }
+aside img { display: inline-block; height: 12.5vw; }
 
-aside a { font-size: 40px; }
+aside a { font-size: 2.5rem; }
 
 aside li:first-child { font-family: Skyrim; }
 
@@ -313,27 +313,27 @@ aside li:last-child a:hover { cursor: url(/customCursors/dbdNormal.cur),pointer;
 
 aside li {margin-right: 0;}
 
-aside div { margin-top: 20px; }
+aside div { margin-top: 1vw; }
 
 
 
 
 
 footer {
-    font-size: xx-large;
-    background-color: rgb(109,65,46);
-    border-top: solid black 4px;
+    font-size: 2rem;
+    background-color: #6d412e;
+    border-top: solid #000000 0.2vw;
     overflow: hidden;
-    padding: 50px;
+    padding: 2.5vw;
 }
 
-footer > div:first-child { margin: -50px -50px 0 -50px; }
+footer > div:first-child { margin: -2.5vw -2.5vw 0 -2.5vw; }
 
 #footer-border {
-    border-top: solid black 4px;
-    background-color: rgb(26,27,36);
-    height: 4px;
-    border-top: solid rgb(109,65,46) 4px;
+    border-top: solid #000000 0.2vw;
+    background-color: #1a1b24;
+    height: 0.2vw;
+    border-top: solid #6d412e 0.2vw;
 }
 
 footer div:nth-child(2) {
@@ -360,13 +360,13 @@ footer > ul {
                          'followUs . . . . .';
 }
 
-footer > ul div { grid-area: followUs; padding-bottom: 25px; }
+footer > ul div { grid-area: followUs; padding-bottom: 1.25vw; }
 
-footer > ul img { height: 50px; }
+footer > ul img { height: 2.5vw; }
 
-footer > ul li { padding: 10px; margin-right: 0;}
+footer > ul li { padding: 0.5vw; margin-right: 0;}
 
-footer > ul li:last-child img { border-radius: 10px; }
+footer > ul li:last-child img { border-radius: 0.5vw; }
 
 
 
@@ -379,4 +379,4 @@ footer > ul li:last-child img { border-radius: 10px; }
 #linkedin { grid-area: linkedin; }
 
 #github { grid-area: github; }
-#github img { border-radius: 10px; }*/
+#github img { border-radius: 0.5vw; }*/
